@@ -9,8 +9,8 @@ public class DeathZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Destruye el GameObject del Player
-            Destroy(other.gameObject);
+            // Reiniciar la escena actual
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

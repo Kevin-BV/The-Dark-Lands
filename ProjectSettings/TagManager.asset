@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - NPC
+  - Ground
+  - Mushroom
   layers:
   - Default
   - TransparentFX
@@ -11,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Suelo
+  - fondo
+  - Background
   - 
   - 
   - 
@@ -40,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1323514923
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 590568019
+    locked: 0
+  - name: Fondo
+    uniqueID: 2546204011
+    locked: 0
+  - name: Suelo
+    uniqueID: 155556669
+    locked: 0
+  - name: Enemy
+    uniqueID: 2722457425
     locked: 0

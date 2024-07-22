@@ -5,15 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    // Método para cambiar a una escena específica
-    public void ChangeScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
+    public string sceneName = "NombreDeTuEscena";
 
-    // Método para recargar la escena actual
-    public void ReloadScene()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (other.CompareTag("Player"))
+        {
+            // Obtener el componente PlayerController del jugador
+            PlayerController player = other.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                // Llamar al método ChangeScene para cambiar a la escena deseada
+                player.ChangeScene(sceneName);
+            }
+        }
     }
 }
